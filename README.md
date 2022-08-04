@@ -1,4 +1,4 @@
-# matlag-graphics-func
+# subfigure
 A few matlab functions to create figures more suitable for articles
 
 The available functions:
