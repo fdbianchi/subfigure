@@ -120,7 +120,7 @@ options.ax.totWidth       = 0.80;
 
 % Axes style
 options.ax.xtickOff       = true;
-options.ax.Xlim           = [0 1];
+options.ax.Xlim           = [];
 
 % changing axes settings according to inputs
 if ~isempty(optUser)
@@ -233,8 +233,10 @@ for jj = 1:nplot
         'LineStyleOrder',options.ax.LineStyleOrder,...
         'DefaultLineLineWidth',options.ax.LineWidth,...
         'ColorOrder',options.ax.ColorOrder,...
-        'XLim',options.ax.Xlim,...
         'Box','on');
+    if ~isempty(options.ax.Xlim)
+        set(Ha(nplot-jj+1), 'XLim', options.ax.Xlim)
+    end            
     
     % remove xtick labels
     if (options.ax.xtickOff) && (jj > 1)
