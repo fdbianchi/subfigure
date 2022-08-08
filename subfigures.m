@@ -1,7 +1,7 @@
 function Ha = subfigures(nplot,varargin)
 
-% SUBFIGURES creates several axes similar to subplot but reducing space
-% between figures
+% SUBFIGURES creates several axes similar to subplot (1 column) but 
+% reducing space between figures
 %
 % Use:
 %   Ha = subfigures(nplot,options)
